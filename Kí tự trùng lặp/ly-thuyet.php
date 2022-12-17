@@ -13,6 +13,7 @@ Ví dụ:
 */
 // Đầu vào
 $s = 'abcbdcef';
+//Tach chuoi thành mảng
 $inputArray = str_split($s);
 
 //Đặt mảng count bằng rỗng
