@@ -14,14 +14,13 @@ function findIndexSecondHighest($s) {
         return;
     }
     $max = 0;
-    $secondMax = 0;
+    $secondMax = -1;
     $findIndex = -1;
     
     foreach($arr as $index => $number) {
         if($number > $max) {
             $secondMax = $max;
             $max = $number;
-            $findIndex = $index;
         }
         if($number > $secondMax && $number < $max) {
             $secondMax = $number;
@@ -36,3 +35,5 @@ function findIndexSecondHighest($s) {
 var_dump( findIndexSecondHighest('8 3 6 1 5 4') );
 echo '<hr>';
 var_dump( findIndexSecondHighest('8 3 6 1 5 4 7') );
+echo '<hr>';
+var_dump( findIndexSecondHighest('8 8 8 8') );
