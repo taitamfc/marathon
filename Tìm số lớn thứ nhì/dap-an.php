@@ -9,33 +9,26 @@ Chỉ số của số lớn thứ 2
 
  /* BẮT ĐẦU ĐÁP ÁN */
 function findIndexSecondHighest($s) {
-    $numbers = explode(' ',$s);
-
-    if( !count($numbers) ){
-        return -1;
+    $arr = explode(' ',$s);
+    if(empty($arr)) {
+        return;
     }
-
-    $indexFirst = 0;
-    $maxFirst = current($numbers);
-    foreach( $numbers as $index => $number ){
-        if( $number > $maxFirst ){
-            $maxFirst = $number;
-            $indexFirst = $index;
+    $max = 0;
+    $secondMax = 0;
+    $findIndex = -1;
+    
+    foreach($arr as $index => $number) {
+        if($number > $max) {
+            $secondMax = $max;
+            $max = $number;
+            $findIndex = $index;
+        }
+        if($number > $secondMax && $number < $max) {
+            $secondMax = $number;
+            $findIndex = $index;
         }
     }
-    unset( $numbers[$indexFirst] );
-
-    $maxSecond = current($numbers);
-    $indexSecond = 0;
-    foreach( $numbers as $index => $number ){
-        if( $number > $maxSecond ){
-            $maxSecond = $number;
-            $indexSecond = $index;
-        }
-    }
-
-    return $indexSecond;
-
+    return $findIndex;
 }
 /* KẾT THÚC ĐÁP ÁN */
 
