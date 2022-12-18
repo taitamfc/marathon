@@ -27,8 +27,11 @@ function solve($arr) {
         }
     }
     
-    sort($mang_so_nt);
-    return $mang_so_nt;
+    if( count($mang_so_nt) ){
+        sort($mang_so_nt);
+        return $mang_so_nt;
+    }
+    return [-1];
 }
 /* KẾT THÚC ĐÁP ÁN */
 
