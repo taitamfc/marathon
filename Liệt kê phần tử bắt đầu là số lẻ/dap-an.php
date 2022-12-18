@@ -32,3 +32,5 @@ function getOddHeadNumbers($s) {
 var_dump( getOddHeadNumbers('13 4456 723424 234234 534234') );
 echo '<hr>';
 var_dump( getOddHeadNumbers('22343534 42312312 6235345') );
+echo '<hr>';
+var_dump( getOddHeadNumbers('22343534 42312312 6235345') );
